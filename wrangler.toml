@@ -1,0 +1,19 @@
+name = "nexus-games-bot"
+main = "src/index.js"
+compatibility_date = "2024-11-01"
+
+# أنشئ الـ KV namespace بالأمر:
+#   npx wrangler kv namespace create CONFIG
+# وحط الـ id اللي هيطلعلك تحت هنا:
+[[kv_namespaces]]
+binding = "CONFIG"
+id = "PUT_KV_NAMESPACE_ID_HERE"
+
+[vars]
+DISCORD_APPLICATION_ID = "PUT_APPLICATION_ID_HERE"
+
+# الأسرار دي متتحطش في الملف ده، بتتسجل بالأوامر:
+#   npx wrangler secret put DISCORD_TOKEN
+#   npx wrangler secret put DISCORD_PUBLIC_KEY
+#   npx wrangler secret put DISCORD_CLIENT_SECRET
+#   npx wrangler secret put SESSION_SECRET
